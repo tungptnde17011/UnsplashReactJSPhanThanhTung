@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DemoAPI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        // const Unsplash = require("unsplash-js").default;
+        // const APP_ACCESS_KEY = "f7b0d91da192deaa54b98ad234eac63483c2ea6e687d63e9002cd67f3e7d47b0";
+        // const APP_SECRET = "5cd9ceb78d7034a9c6b284299d5058fa333f57e1b5548cb259ff8abcdeae08ce";
+        // const CALLBACK_URL = "https://www.facebook.com/phan.tung.581525";
+
+        // const unsplash = new Unsplash({
+        //     applicationId: APP_ACCESS_KEY,
+        //     secret: APP_SECRET,
+        //     callbackUrl: CALLBACK_URL
+        // });
+
+        // const authenticationUrl = unsplash.auth.getAuthenticationUrl([
+        //     "public",
+        //     "write_likes"
+        // ]);
+
+        // location.assign(authenticationUrl);
+
+        // unsplash.auth.userAuthentication(query.code)
+        //     .then(toJson)
+        //     .then(json => {
+        //         console.log(json);
+        //         unsplash.auth.setBearerToken(json.access_token);
+        //     });
+
+        // const params = {
+        //     client_id: "f7b0d91da192deaa54b98ad234eac63483c2ea6e687d63e9002cd67f3e7d47b0",
+        //     redirect_uri: "https://www.facebook.com/phan.tung.581525",
+        //     response_type: "code"
+        // }
+
+        // var getCodeURL = "https://unsplash.com/oauth/authorize?"
+        // var objectKeys = Object.keys(params);
+        // for (let i = 0; i < objectKeys.length; i++) {
+        //     getCodeURL += objectKeys[i] + "=" + params[objectKeys[i]] + "&";
+        // }
+        // var url = "https://unsplash.com/photos/Snsux9OwaEs/download?force=true";
+        // var url = "https://api.unsplash.com/search/photos?page=1&query=weather&client_id=f7b0d91da192deaa54b98ad234eac63483c2ea6e687d63e9002cd67f3e7d47b0&page=2";
+        // var url = "https://api.unsplash.com/photos?client_id=f7b0d91da192deaa54b98ad234eac63483c2ea6e687d63e9002cd67f3e7d47b0&page=1";
+        // var url = "https://api.openweathermap.org/data/2.5/forecast/daily?appid=14dc40b8ec7a081b940c70b8ebcf3851&q=Hanoi,vn&cnt=16";
+        // var url = "https://api.openweathermap.org/data/2.5/weather?q=Hanoi,vn&appid=1cdff4d19bad8191e32e49f8008b1b82";
+        // var url = "https://api.unsplash.com/photos/?client_id=f7b0d91da192deaa54b98ad234eac63483c2ea6e687d63e9002cd67f3e7d47b0";
+        // var url = "https://unsplash.com/oauth/authorize?client_id=f7b0d91da192deaa54b98ad234eac63483c2ea6e687d63e9002cd67f3e7d47b0&redirect_uri=https://www.facebook.com/phan.tung.581525&response_type=code";
+        fetch(url, {
+            method: "GET", 
+            mode: "cors",
+            headers: {
+                // "Origin": "https://api.openweathermap.org"
+            }
+        })
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    console.log(result);
+                },
+                (error) => {
+                    console.log(error);
+                }
+            )
+
+        // fetch("https://unsplash.com/oauth/token", {
+        //     method: "POST",
+        //     body: JSON.stringify({
+        //         client_id: "f7b0d91da192deaa54b98ad234eac63483c2ea6e687d63e9002cd67f3e7d47b0",
+        //         client_secret: "5cd9ceb78d7034a9c6b284299d5058fa333f57e1b5548cb259ff8abcdeae08ce",
+        //         redirect_uri: "https://www.facebook.com/phan.tung.581525",
+        //         code: "e07302b97ff8d4fa1ef5dd2b17433c7c7371651b868ecbf639fcd9def1e59bf7",
+        //         grant_type: "authorization_code"
+        //     }),
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     }
+        // })
+        //     .then(res => res.json())
+        //     .then(
+        //         (result) => {
+        //             console.log(result);
+        //         },
+        //         (error) => {
+        //             console.log(error);
+        //         }
+        //     )
+    </script>
+</body>
+
+</html>
